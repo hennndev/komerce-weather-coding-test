@@ -1,9 +1,10 @@
+import { Suspense } from "react";
 import Weathers from "./components/Weathers";
 
 export default function Home() {
   return (
-    <div>
+    <Suspense fallback={<div>Loading...</div>}>
       <Weathers />
-    </div>
+    </Suspense>
   );
 }
